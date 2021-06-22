@@ -15,6 +15,6 @@ public class FoodishConfig {
 
     @Bean
     public RouterFunction<ServerResponse> route(ClientHandler clientHandler) {
-        return RouterFunctions.route(RequestPredicates.GET("/hello/{id}").and(RequestPredicates.accept(MediaType.APPLICATION_JSON)), clientHandler::burger);
+        return RouterFunctions.route(RequestPredicates.GET("/burger/{id}").and(RequestPredicates.accept(MediaType.APPLICATION_JSON)), clientHandler::burger);
     }
 }
